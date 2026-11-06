@@ -1,0 +1,74 @@
+# Real-World Software Engineering Portfolio: Advanced Python Backends
+
+This repository houses the end-to-end engineering specification, database architectures, and production rollout pipelines for two real-world backend systems. Both applications are developed utilizing a strict Python-centric ecosystem, prioritizing high concurrency, type-safe data parsing, structural schema migrations, and local container orchestration.
+
+---
+
+## 🛠️ The Core Technical Stack
+
+The entire architecture is constrained to a modern, decoupled, pure Python footprint:
+* **Core Runtime:** Python 3.11+ (Utilizing asynchronous loop primitives, context managers, and strict generic type hinting).
+* **API Framework:** FastAPI (Leveraging native `async/await` handling and automated OpenAPI compliance profiling).
+* **Data Parsing & Validation:** Pydantic v2 (Strict cryptographic sanitization, data-shape enforcement, and custom field constraints).
+* **Database & Migrations:** PostgreSQL + SQLAlchemy ORM (Thread-safe connection pooling) combined with Alembic for source-controlled database version rollbacks.
+* **Micro-Frontends:** Streamlit (High-performance analytical presentation layers built 100% in Python).
+* **Containerization:** Docker + Docker Compose (Isolated networks for application runners and persistent volume states).
+
+---
+
+## 🏢 System 1: Distributed Campus Placement Management Portal
+
+An enterprise-grade administration hub engineered to govern multi-party workflows between Students, Corporate Recruiters, and Academic Personnel. The app relies on complex transactional business logic and role-based filters.
+
+### Key Architectural Benchmarks
+* **Role-Based Access Control (RBAC):** Token-injected functional dependencies executing route protection boundaries at the API layer.
+* **Stateless Authorization Engine:** Time-expiring JWT (JSON Web Tokens) with cryptographically salted `bcrypt` password data hashing.
+* **Relational Normalization:** Structured PostgreSQL schema mapped up to 3NF parameters to guarantee absolute transactional consistency (ACID).
+* **Automated Migration Tracks:** Full Alembic lifecycle control to execute structural schema updates securely across team development states.
+
+---
+
+## 🤖 System 2: Asynchronous AI Document Q&A Pipeline (RAG)
+
+A production-style Retrieval-Augmented Generation ingestion layout that enables multi-format parsing, semantic chunk indexing, and context-bounded semantic search using artificial intelligence endpoints.
+
+### Key Architectural Benchmarks
+* **Asynchronous Chunk Ingestion:** Memory-bounded Python generators processing heavy file chunks safely without inducing server memory leakage.
+* **Mathematical Vector Analytics:** Local structural embedding conversion mapped into highly responsive lookup indexes (FAISS / ChromaDB).
+* **Prompt Engineering Bounding:** Strict system instruction routing designed to eliminate structural model hallucination by limiting responses exclusively to extracted source contexts.
+* **Secrets Separation:** Complete decoupling of configuration profiles using clean environment boundary spaces (`.env.example` mapping).
+
+---
+
+## 📂 Production Repository Structural Architecture
+
+Both application workspaces utilize the standard software layout detailed below:
+
+```text
+enterprise_project_root/
+│
+├── app/
+│   ├── main.py                 # Application bootstrapper and lifecycle configuration
+│   ├── config.py               # Environments parsing, API profiles, and structural setups
+│   ├── database.py             # Engine creation and scoped ORM transactional session bindings
+│   ├── models.py               # Relational entity layouts (Database Layer)
+│   ├── schemas.py              # Pydantic data shaping configurations (Validation Layer)
+│   ├── auth.py                 # Stateless token generation and cryptographic primitives
+│   └── routers/
+│       ├── core_resources.py   # Asynchronous functional route controller configurations
+│       └── system_analytics.py # Relational grouping, metrics, and complex aggregation lines
+│
+├── ui/
+│   └── dashboard.py            # Streamlit micro-frontend layout (100% Python Engine)
+│
+├── alembic/                    # Programmatic database tracking scripts and revision logs
+├── Dockerfile                  # Base container builder image specifications
+├── compose.yaml                # Multi-node system network wiring (App + PostgreSQL persistent states)
+├── requirements.txt            # Declarative top-level application package manifest
+└── README.md                   # System documentation and structural deployment guides
+```
+
+---
+
+## 📈 Engineering Evolution Blueprint
+
